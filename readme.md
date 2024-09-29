@@ -1,6 +1,8 @@
 Shards Driver
 =============
 
+Kubernetes CSI driver assembling configuration files out of the shard resources.
+
 
 # Example
 
