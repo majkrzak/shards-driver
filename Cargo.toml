@@ -1,0 +1,4 @@
+[package]
+name = "shards-driver"
+version = "0.0.0"
+authors = ["Piotr Majkrzak <piotr@majkrzak.dev"]
