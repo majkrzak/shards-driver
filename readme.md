@@ -4,6 +4,7 @@ Shards Driver
 Kubernetes CSI driver assembling configuration files out of the shard resources.
 
 
+
 # Example
 
 ```yaml
@@ -109,4 +110,11 @@ return [
     "test4"
   ]
 }
+```
+
+
+# Instalation
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/majkrzak/shards-driver/master/shards-driver.yaml
 ```

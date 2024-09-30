@@ -1,0 +1,3 @@
+driverName: shards
+driverImage: ghcr.io/majkrzak/shards-driver
+registarImage: k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.12.0
