@@ -1,0 +1,23 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: configshards.shards.driver
+spec:
+  group: shards.driver
+  scope: Namespaced
+  names:
+    kind: ConfigShard
+    singular: configshard
+    plural: configshards
+  versions:
+  - name: dev
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          data:
+            type: object
+            x-kubernetes-preserve-unknown-fields: true

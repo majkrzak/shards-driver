@@ -26,14 +26,12 @@ spec:
           mountPath: /var/lib/kubelet/
           mountPropagation: Bidirectional
         env:
-        - name: DRIVER_NAME
-          value:
         - name: RUST_LOG
           value: "info"
       - name: registrar
         image: {{.Values.registarImage}}
-        args: {{.Values.driverName}}
-        - --kubelet-registration-path=/var/lib/kubelet/plugins/{{.Values.driverName}}/socket
+        aryo
+        - --kubelet-registration-path=/var/lib/kubelet/plugins/shards.driver/socket
         volumeMounts:
         - name: plugin-dir
           mountPath: /run/csi
@@ -50,5 +48,5 @@ spec:
           type: Directory
       - name: plugin-dir
         hostPath:
-          path: /var/lib/kubelet/plugins/{{.Values.driverName}}/
+          path: /var/lib/kubelet/plugins/shards.driver/
           type: DirectoryOrCreate
